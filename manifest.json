@@ -1,0 +1,20 @@
+{
+  "name": "xCopyFilter",
+  "description": "Filter clipboard text with pattern",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions": [ "tabs", "clipboardRead", "clipboardWrite" ],
+  "background": {
+    "page": "background.html"
+  },
+  "browser_action": {
+    "default_popup": "xCopyFilter.html",
+    "default_title": "xCopyFilter"
+  },
+  "content_scripts": [
+    {
+      "js": [ "xCopyFilter.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+    }
+  ]
+}
